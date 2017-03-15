@@ -35,6 +35,7 @@ class CompaniesController < ApplicationController
   end
 
   def set_company
-    @company = Company.find(params[:id])
+    @company = Company.find_by(id: params[:id])
+    json_404("Company doesn't exist") if @company.nil?
   end
 end
