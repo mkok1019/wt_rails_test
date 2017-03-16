@@ -4,6 +4,6 @@ module Response
   end
 
   def json_404(msg)
-    json_response(msg, 404)
+    json_response(msg, :not_found)
   end
 end
