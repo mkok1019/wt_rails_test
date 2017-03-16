@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  protect_from_forgery except: :create
   before_action :set_company, only: [:show, :update, :destroy]
 
   # GET /companies
